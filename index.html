@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selection Translate AI – API Guide</title>
+  <link rel="icon" href="icon128.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══ Nav ══════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">
+        <img src="icon128.png" alt="Selection Translate AI" width="28" height="28">
+        <span>Selection Translate AI</span>
+      </a>
+      <div class="nav-links">
+        <a href="#alternative" data-i18n="nav_alt"></a>
+        <a href="#guide" data-i18n="nav_guide"></a>
+        <a href="#privacy" data-i18n="nav_privacy"></a>
+      </div>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="ru" title="Русский">&#127479;&#127482;</button>
+        <button class="lang-btn" data-lang="en" title="English">&#127468;&#127463;</button>
+        <button class="lang-btn" data-lang="es" title="Español">&#127466;&#127480;</button>
+        <button class="lang-btn" data-lang="zh" title="中文">&#127464;&#127475;</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ Hero ═════════════════════════════════════════════════ -->
+  <section class="hero" id="top">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content container">
+      <div class="hero-badge-wrap">
+        <span class="hero-badge" data-i18n="badge"></span>
+      </div>
+      <h1 class="hero-title" data-i18n="hero_title"></h1>
+      <p class="hero-sub" data-i18n="hero_sub"></p>
+      <a href="#guide" class="hero-cta" data-i18n="hero_cta"></a>
+    </div>
+    <div class="hero-scroll">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 5v14M5 12l7 7 7-7" stroke="rgba(255,255,255,0.6)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══ Alternative ══════════════════════════════════════════ -->
+  <section class="alt-section" id="alternative">
+    <div class="container">
+      <div class="section-tag reveal" data-i18n="alt_tag"></div>
+      <h2 class="section-title reveal" data-i18n="alt_title"></h2>
+      <p class="section-sub reveal" data-i18n="alt_sub"></p>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">&#128273;</div>
+          <h3 data-i18n="feat1_title"></h3>
+          <p data-i18n="feat1_text"></p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">&#9854;&#65039;</div>
+          <h3 data-i18n="feat2_title"></h3>
+          <p data-i18n="feat2_text"></p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">&#128274;</div>
+          <h3 data-i18n="feat3_title"></h3>
+          <p data-i18n="feat3_text"></p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">&#128640;</div>
+          <h3 data-i18n="feat4_title"></h3>
+          <p data-i18n="feat4_text"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Guide ════════════════════════════════════════════════ -->
+  <section class="guide-section" id="guide">
+    <div class="container">
+      <div class="section-tag reveal" data-i18n="guide_tag"></div>
+      <h2 class="section-title reveal" data-i18n="guide_title"></h2>
+      <p class="section-sub reveal" data-i18n="guide_sub"></p>
+
+      <div class="provider-tabs reveal" id="provider-tabs">
+        <button class="provider-tab active" data-provider="openai">
+          <span class="ptab-dot" style="background:#10a37f"></span>
+          <span>OpenAI</span>
+        </button>
+        <button class="provider-tab" data-provider="anthropic">
+          <span class="ptab-dot" style="background:#d97706"></span>
+          <span>Anthropic</span>
+        </button>
+        <button class="provider-tab" data-provider="google">
+          <span class="ptab-dot" style="background:#4285F4"></span>
+          <span>Google Gemini</span>
+        </button>
+        <button class="provider-tab" data-provider="xai">
+          <span class="ptab-dot" style="background:#111827"></span>
+          <span>xAI Grok</span>
+        </button>
+      </div>
+
+      <div id="guide-content" class="guide-content"></div>
+    </div>
+  </section>
+
+  <!-- ══ Privacy ══════════════════════════════════════════════ -->
+  <section class="privacy-section" id="privacy">
+    <div class="container">
+      <div class="privacy-inner">
+        <div class="privacy-visual">
+          <svg class="lock-svg" width="160" height="160" viewBox="0 0 160 160" fill="none">
+            <circle class="lock-bg" cx="80" cy="80" r="72" fill="#EEF2FF"/>
+            <path class="lock-shackle" d="M52 76V52C52 36.5 64.5 24 80 24C95.5 24 108 36.5 108 52V76"
+              stroke="#4F46E5" stroke-width="10" stroke-linecap="round"/>
+            <rect class="lock-body" x="38" y="72" width="84" height="64" rx="12" fill="#4F46E5"/>
+            <circle class="lock-hole" cx="80" cy="100" r="10" fill="white"/>
+            <rect class="lock-bar" x="76" y="100" width="8" height="16" rx="3" fill="white"/>
+          </svg>
+        </div>
+        <div class="privacy-text-wrap">
+          <div class="section-tag" data-i18n="privacy_tag"></div>
+          <h2 class="section-title" data-i18n="privacy_title"></h2>
+          <p data-i18n="privacy_text"></p>
+          <ul class="privacy-list">
+            <li data-i18n="privacy_li1"></li>
+            <li data-i18n="privacy_li2"></li>
+            <li data-i18n="privacy_li3"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Footer ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="icon128.png" alt="" width="22" height="22">
+      <span data-i18n="footer"></span>
+      <a href="privacy-policy.html" class="footer-privacy-link" data-i18n="footer_privacy"></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
