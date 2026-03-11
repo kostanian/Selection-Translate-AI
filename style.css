@@ -666,8 +666,11 @@ img { display: block; }
   font-size: 14px; color: rgba(255,255,255,0.6);
 }
 .footer-inner img { opacity: 0.6; }
+.footer-links {
+  margin-left: auto; display: flex; align-items: center; gap: 20px;
+}
 .footer-privacy-link {
-  margin-left: auto; font-size: 13px;
+  font-size: 13px;
   color: rgba(255,255,255,0.55);
   transition: color var(--ease);
 }
