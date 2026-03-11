@@ -13,11 +13,22 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#top" class="nav-logo">
-        <img src="icon128.png" alt="Selection Translate AI" width="28" height="28">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;display:block">
+          <defs>
+            <linearGradient id="nlg" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+          <circle cx="14" cy="14" r="14" fill="url(#nlg)"/>
+          <rect x="8" y="9.5" width="12" height="2.5" rx="1.25" fill="white"/>
+          <rect x="12.75" y="9.5" width="2.5" height="10" rx="1.25" fill="white"/>
+        </svg>
         <span>Selection Translate AI</span>
       </a>
       <div class="nav-links">
         <a href="#alternative" data-i18n="nav_alt"></a>
+        <a href="#howto" data-i18n="nav_howto"></a>
         <a href="#guide" data-i18n="nav_guide"></a>
         <a href="#privacy" data-i18n="nav_privacy"></a>
       </div>
@@ -57,24 +68,86 @@
       <p class="section-sub reveal" data-i18n="alt_sub"></p>
       <div class="features-grid">
         <div class="feature-card reveal">
-          <div class="feature-icon">&#128273;</div>
+          <div class="feature-icon">&#127381;</div>
           <h3 data-i18n="feat1_title"></h3>
           <p data-i18n="feat1_text"></p>
         </div>
         <div class="feature-card reveal">
-          <div class="feature-icon">&#9854;&#65039;</div>
+          <div class="feature-icon">&#11088;</div>
           <h3 data-i18n="feat2_title"></h3>
           <p data-i18n="feat2_text"></p>
         </div>
         <div class="feature-card reveal">
-          <div class="feature-icon">&#128274;</div>
+          <div class="feature-icon">&#128273;</div>
           <h3 data-i18n="feat3_title"></h3>
           <p data-i18n="feat3_text"></p>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon">&#128640;</div>
-          <h3 data-i18n="feat4_title"></h3>
-          <p data-i18n="feat4_text"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ How to use ═══════════════════════════════════════════ -->
+  <section class="howto-section" id="howto">
+    <div class="container">
+      <div class="section-tag reveal" data-i18n="howto_tag"></div>
+      <h2 class="section-title reveal" data-i18n="howto_title"></h2>
+      <p class="section-sub reveal" data-i18n="howto_sub"></p>
+
+      <div class="howto-steps reveal">
+        <div class="howto-step">
+          <div class="howto-step-num">1</div>
+          <div class="howto-step-body">
+            <h3 data-i18n="howto_s1_title"></h3>
+            <p data-i18n="howto_s1_text"></p>
+          </div>
+        </div>
+        <div class="howto-step">
+          <div class="howto-step-num">2</div>
+          <div class="howto-step-body">
+            <h3 data-i18n="howto_s2_title"></h3>
+            <p data-i18n="howto_s2_text"></p>
+          </div>
+        </div>
+        <div class="howto-step">
+          <div class="howto-step-num">3</div>
+          <div class="howto-step-body">
+            <h3 data-i18n="howto_s3_title"></h3>
+            <p data-i18n="howto_s3_text"></p>
+          </div>
+        </div>
+        <div class="howto-step">
+          <div class="howto-step-num">4</div>
+          <div class="howto-step-body">
+            <h3 data-i18n="howto_s4_title"></h3>
+            <p data-i18n="howto_s4_text"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="howto-features">
+        <div class="howto-feature reveal">
+          <div class="howto-feat-icon">⚡</div>
+          <h3 data-i18n="howto_instant_title"></h3>
+          <p data-i18n="howto_instant_text"></p>
+        </div>
+        <div class="howto-feature reveal">
+          <div class="howto-feat-icon">📚</div>
+          <h3 data-i18n="howto_dict_title"></h3>
+          <p data-i18n="howto_dict_text"></p>
+        </div>
+        <div class="howto-feature reveal">
+          <div class="howto-feat-icon">⌨️</div>
+          <h3 data-i18n="howto_hotkeys_title"></h3>
+          <div class="howto-hotkeys">
+            <div class="howto-hk-row"><kbd>Alt+Shift+T</kbd><span data-i18n="howto_hk_toggle"></span></div>
+            <div class="howto-hk-row"><kbd>Alt+Shift+S</kbd><span data-i18n="howto_hk_dict"></span></div>
+            <div class="howto-hk-row"><kbd>Esc</kbd><span data-i18n="howto_hk_close"></span></div>
+          </div>
+        </div>
+        <div class="howto-feature reveal">
+          <div class="howto-feat-icon">⚙️</div>
+          <h3 data-i18n="howto_settings_title"></h3>
+          <p data-i18n="howto_settings_text"></p>
         </div>
       </div>
     </div>
@@ -141,7 +214,11 @@
   <!-- ══ Footer ═══════════════════════════════════════════════ -->
   <footer class="footer">
     <div class="container footer-inner">
-      <img src="icon128.png" alt="" width="22" height="22">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.65;display:block;flex-shrink:0">
+          <circle cx="11" cy="11" r="11" fill="#8b5cf6"/>
+          <rect x="6" y="7.5" width="10" height="2" rx="1" fill="white"/>
+          <rect x="10" y="7.5" width="2" height="8" rx="1" fill="white"/>
+        </svg>
       <span data-i18n="footer"></span>
       <a href="privacy-policy.html" class="footer-privacy-link" data-i18n="footer_privacy"></a>
     </div>

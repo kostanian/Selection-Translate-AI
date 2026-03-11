@@ -6,23 +6,43 @@
 const T = {
   ru: {
     nav_alt:      "Без лимитов",
-    nav_guide:    "Инструкция",
+    nav_guide:    "API ключи",
     nav_privacy:  "Приватность",
-    badge:        "Скоро",
-    hero_title:   "Подписка\nв разработке",
-    hero_sub:     "Пока план подписки готовится, вы уже можете убрать все ограничения прямо сейчас — просто подключите свой API ключ.",
-    hero_cta:     "Узнать как →",
-    alt_tag:      "Доступно прямо сейчас",
-    alt_title:    "Неограниченные переводы уже сегодня",
-    alt_sub:      "Подключи свой API ключ от любого поддерживаемого AI провайдера — и лимит 30 переводов в день перестаёт действовать. Расширение не накладывает никаких ограничений со своей стороны: лимиты определяются только балансом вашего API ключа.",
-    feat1_title:  "4 провайдера на выбор",
-    feat1_text:   "OpenAI, Anthropic, Google Gemini и xAI Grok — выбери любого, который подходит именно тебе.",
-    feat2_title:  "Без лимитов от расширения",
-    feat2_text:   "Расширение не ограничивает количество переводов. Лимиты зависят только от твоего API баланса.",
-    feat3_title:  "Приватно и безопасно",
-    feat3_text:   "API ключ хранится в кэше твоего браузера и никогда не передаётся третьим лицам.",
-    feat4_title:  "Быстрая настройка",
-    feat4_text:   "Получить API ключ и настроить расширение можно за 2–3 минуты. Никакой сложной конфигурации.",
+    nav_howto:    "Как использовать",
+    howto_tag:    "Инструкция",
+    howto_title:  "Выдели текст — получи перевод",
+    howto_sub:    "Расширение работает незаметно на любом сайте. Никакой настройки — просто выделяй текст.",
+    howto_s1_title: "Выдели текст на странице",
+    howto_s1_text:  "На любом сайте выдели слово, фразу или абзац мышью. Минимум 2 символа, максимум 5000. Работает на всех языках.",
+    howto_s2_title: "Нажми кнопку перевода",
+    howto_s2_text:  "Рядом с выделением появится фиолетовая кнопка с буквой «Т». Наведи — начнётся предзагрузка перевода. Нажми — откроется попап с результатом.",
+    howto_s3_title: "Читай перевод",
+    howto_s3_text:  "Перевод появится в небольшом всплывающем окне. Кнопка копирования — скопировать результат одним кликом. Закрыть — крестиком или кликом за пределами попапа.",
+    howto_s4_title: "Добавь в словарь (по желанию)",
+    howto_s4_text:  "В попапе есть кнопка «+» — она сохраняет пару оригинал → перевод в личный словарь. Словарь открывается боковой панелью справа.",
+    howto_instant_title: "Мгновенный перевод",
+    howto_instant_text:  "Включи «Переводить сразу при выделении» в попапе расширения. Перевод начнётся автоматически сразу после того, как отпустишь кнопку мыши — без нажатия кнопки.",
+    howto_dict_title: "Личный словарь",
+    howto_dict_text:  "Собирай переводы в словарь прямо во время чтения. Панель открывается сбоку, ширину можно регулировать перетаскиванием. Экспорт в CSV и Excel — одной кнопкой.",
+    howto_hotkeys_title: "Горячие клавиши",
+    howto_hk_toggle:    "Включить / выключить расширение",
+    howto_hk_dict:      "Открыть / закрыть словарь",
+    howto_hk_close:     "Закрыть попап перевода",
+    howto_settings_title: "Настройки",
+    howto_settings_text:  "Кликни на иконку расширения в панели браузера: переключатель вкл/выкл, язык перевода, язык интерфейса (🇷🇺🇬🇧🇪🇸🇨🇳), источник API — публичный сервер или свой ключ.",
+    badge:        "Подписка скоро",
+    hero_title:   "Без лимитов\nуже сегодня",
+    hero_sub:     "Подключите свой API ключ от OpenAI, Anthropic, Google или xAI — и переводите без ограничений. Подписка с ещё более простой настройкой уже в разработке.",
+    hero_cta:     "Как подключить →",
+    alt_tag:      "Три варианта использования",
+    alt_title:    "Выбери удобный режим",
+    alt_sub:      "Расширение работает бесплатно сразу после установки. Нужно больше — оформи подписку или подключи свой API ключ.",
+    feat1_title:  "Бесплатно — прямо сейчас",
+    feat1_text:   "30 переводов в день уже включены. Никакой настройки — просто установи расширение и начни переводить. Бесплатно и без регистрации.",
+    feat2_title:  "Подписка",
+    feat2_text:   "Больше переводов в день за символическую плату. Помогает нам содержать проект и серверы. Скоро в продаже.",
+    feat3_title:  "Свой API ключ",
+    feat3_text:   "Подключи ключ OpenAI, Anthropic, Google или xAI — и переводи без каких-либо ограничений расширения. Для тех, кто предпочитает полный контроль.",
     guide_tag:    "Пошаговая инструкция",
     guide_title:  "Как получить API ключ",
     guide_sub:    "Выбери провайдера и следуй инструкции. Это займёт всего пару минут.",
@@ -39,11 +59,11 @@ const T = {
     warn_once:    "Ключ показывается только один раз — скопируй немедленно!",
     final_hint:   "Попап расширения → «Свой API ключ» → выбери провайдера → вставь ключ → «Проверить ключ»",
     open_site:    "Открыть сайт ↗",
-    popup_connection: "Подключение:",
-    popup_server:     "Через сервер",
+    popup_connection: "Источник API",
+    popup_server:     "Публичный сервер",
     popup_subscribe:  "Купить подписку",
     popup_own_key:    "Свой API ключ",
-    popup_own_hint:   "Прямые запросы к AI провайдеру без лимитов",
+    popup_own_hint:   "Без ограничений",
     popup_provider:   "Провайдер:",
     popup_model:      "Модель:",
     popup_api_key:    "API ключ:",
@@ -52,23 +72,43 @@ const T = {
   },
   en: {
     nav_alt:      "No limits",
-    nav_guide:    "Guide",
+    nav_guide:    "API Keys",
     nav_privacy:  "Privacy",
-    badge:        "Soon",
-    hero_title:   "Subscription\nin development",
-    hero_sub:     "While the subscription plan is being prepared, you can remove all limits right now — just connect your own API key.",
-    hero_cta:     "Learn how →",
-    alt_tag:      "Available right now",
-    alt_title:    "Unlimited translations today",
-    alt_sub:      "Connect your own API key from any supported AI provider — and the 30 translations/day limit no longer applies. The extension imposes no limits on its side: limits depend only on your API key balance.",
-    feat1_title:  "4 providers to choose from",
-    feat1_text:   "OpenAI, Anthropic, Google Gemini and xAI Grok — choose whichever suits you best.",
-    feat2_title:  "No limits from the extension",
-    feat2_text:   "The extension doesn't limit your translation count. Limits depend only on your API balance.",
-    feat3_title:  "Private and secure",
-    feat3_text:   "Your API key is stored in your browser cache and never transmitted to any third party.",
-    feat4_title:  "Quick setup",
-    feat4_text:   "Get an API key and configure the extension in just 2–3 minutes. No complex configuration.",
+    nav_howto:    "How to use",
+    howto_tag:    "User guide",
+    howto_title:  "Select text — get translation",
+    howto_sub:    "The extension works silently on any website. No configuration — just select text and go.",
+    howto_s1_title: "Select text on the page",
+    howto_s1_text:  "On any website, highlight a word, phrase, or paragraph with your mouse. Minimum 2 characters, maximum 5000. Works with all languages.",
+    howto_s2_title: "Click the translate button",
+    howto_s2_text:  "A purple button with a «T» icon appears near your selection. Hover to pre-load the translation. Click to open the result popup.",
+    howto_s3_title: "Read your translation",
+    howto_s3_text:  "The translation appears in a small floating popup. Use the copy button to copy the result with one click. Close with the × button or by clicking outside.",
+    howto_s4_title: "Save to dictionary (optional)",
+    howto_s4_text:  "The popup has a «+» button to save the original → translation pair to your personal dictionary. Open the dictionary as a side panel on the right.",
+    howto_instant_title: "Instant translation",
+    howto_instant_text:  "Enable «Instant translation on selection» in the extension popup. Translation starts automatically as soon as you release the mouse button — no click needed.",
+    howto_dict_title: "Personal dictionary",
+    howto_dict_text:  "Build a vocabulary list while you read. The panel opens on the right side; drag the left edge to resize. Export your list to CSV or Excel in one click.",
+    howto_hotkeys_title: "Keyboard shortcuts",
+    howto_hk_toggle:    "Turn extension on / off",
+    howto_hk_dict:      "Open / close dictionary panel",
+    howto_hk_close:     "Close translation popup",
+    howto_settings_title: "Settings",
+    howto_settings_text:  "Click the extension icon in your browser toolbar: on/off toggle, translation language, interface language (🇷🇺🇬🇧🇪🇸🇨🇳), API source — public server or own key.",
+    badge:        "Subscription coming soon",
+    hero_title:   "No limits\nstarting today",
+    hero_sub:     "Connect your own API key from OpenAI, Anthropic, Google, or xAI — and translate without limits. A subscription with even simpler setup is already in development.",
+    hero_cta:     "How to connect →",
+    alt_tag:      "Three ways to use",
+    alt_title:    "Choose your mode",
+    alt_sub:      "The extension works for free right after installation. Need more — subscribe or connect your own API key.",
+    feat1_title:  "Free — right now",
+    feat1_text:   "30 translations per day are already included. No setup needed — just install the extension and start translating. Free and no registration required.",
+    feat2_title:  "Subscription",
+    feat2_text:   "More translations per day for a small fee. Helps us maintain the project and servers. Coming soon.",
+    feat3_title:  "Own API key",
+    feat3_text:   "Connect an OpenAI, Anthropic, Google, or xAI key — and translate without any limits from the extension. For those who prefer full control.",
     guide_tag:    "Step-by-step guide",
     guide_title:  "How to get an API key",
     guide_sub:    "Choose a provider and follow the instructions. It only takes a couple of minutes.",
@@ -85,11 +125,11 @@ const T = {
     warn_once:    "The key is shown only once — copy it immediately!",
     final_hint:   "Extension popup → «Own API key» → select provider → paste key → «Check key»",
     open_site:    "Open site ↗",
-    popup_connection: "Connection:",
-    popup_server:     "Via server",
+    popup_connection: "API source",
+    popup_server:     "Public server",
     popup_subscribe:  "Buy subscription",
     popup_own_key:    "Own API key",
-    popup_own_hint:   "Direct requests to AI provider, no extension limits",
+    popup_own_hint:   "No limits",
     popup_provider:   "Provider:",
     popup_model:      "Model:",
     popup_api_key:    "API key:",
@@ -98,23 +138,43 @@ const T = {
   },
   es: {
     nav_alt:      "Sin límites",
-    nav_guide:    "Guía",
+    nav_guide:    "Claves API",
     nav_privacy:  "Privacidad",
-    badge:        "Próximamente",
-    hero_title:   "Suscripción\nen desarrollo",
-    hero_sub:     "Mientras se prepara el plan de suscripción, ya puedes eliminar todos los límites ahora mismo — simplemente conecta tu propia clave API.",
-    hero_cta:     "Cómo hacerlo →",
-    alt_tag:      "Disponible ahora mismo",
-    alt_title:    "Traducciones ilimitadas hoy",
-    alt_sub:      "Conecta tu propia clave API de cualquier proveedor de IA compatible — y el límite de 30 traducciones/día ya no se aplica. La extensión no impone ningún límite por su parte: los límites dependen únicamente del saldo de tu clave API.",
-    feat1_title:  "4 proveedores a elegir",
-    feat1_text:   "OpenAI, Anthropic, Google Gemini y xAI Grok — elige el que mejor se adapte a ti.",
-    feat2_title:  "Sin límites de la extensión",
-    feat2_text:   "La extensión no limita el número de traducciones. Los límites dependen solo de tu saldo API.",
-    feat3_title:  "Privado y seguro",
-    feat3_text:   "Tu clave API se guarda en la caché del navegador y nunca se transmite a terceros.",
-    feat4_title:  "Configuración rápida",
-    feat4_text:   "Obtén una clave API y configura la extensión en solo 2–3 minutos. Sin configuraciones complejas.",
+    nav_howto:    "Cómo usar",
+    howto_tag:    "Guía de uso",
+    howto_title:  "Selecciona texto — obtén traducción",
+    howto_sub:    "La extensión funciona de forma silenciosa en cualquier sitio web. Sin configuración — solo selecciona texto y listo.",
+    howto_s1_title: "Selecciona texto en la página",
+    howto_s1_text:  "En cualquier sitio web, resalta una palabra, frase o párrafo con el ratón. Mínimo 2 caracteres, máximo 5000. Funciona con todos los idiomas.",
+    howto_s2_title: "Haz clic en el botón de traducción",
+    howto_s2_text:  "Aparece un botón morado con la letra «T» cerca de tu selección. Pasa el cursor para precargar la traducción. Haz clic para abrir el popup con el resultado.",
+    howto_s3_title: "Lee tu traducción",
+    howto_s3_text:  "La traducción aparece en una pequeña ventana flotante. Usa el botón de copiar para copiar el resultado con un clic. Cierra con la × o haciendo clic fuera.",
+    howto_s4_title: "Guarda en el diccionario (opcional)",
+    howto_s4_text:  "El popup tiene un botón «+» para guardar el par original → traducción en tu diccionario personal. Abre el diccionario como panel lateral a la derecha.",
+    howto_instant_title: "Traducción instantánea",
+    howto_instant_text:  "Activa «Traducción inmediata al seleccionar» en el popup de la extensión. La traducción comienza automáticamente al soltar el botón del ratón, sin necesidad de hacer clic.",
+    howto_dict_title: "Diccionario personal",
+    howto_dict_text:  "Crea una lista de vocabulario mientras lees. El panel se abre a la derecha; arrastra el borde izquierdo para redimensionarlo. Exporta tu lista a CSV o Excel con un clic.",
+    howto_hotkeys_title: "Atajos de teclado",
+    howto_hk_toggle:    "Activar / desactivar la extensión",
+    howto_hk_dict:      "Abrir / cerrar el panel del diccionario",
+    howto_hk_close:     "Cerrar el popup de traducción",
+    howto_settings_title: "Configuración",
+    howto_settings_text:  "Haz clic en el icono de la extensión en la barra del navegador: interruptor on/off, idioma de traducción, idioma de interfaz (🇷🇺🇬🇧🇪🇸🇨🇳), fuente de API — servidor público o clave propia.",
+    badge:        "Suscripción próximamente",
+    hero_title:   "Sin límites\ndesde hoy",
+    hero_sub:     "Conecta tu propia clave API de OpenAI, Anthropic, Google o xAI — y traduce sin restricciones. Una suscripción con una configuración aún más sencilla ya está en desarrollo.",
+    hero_cta:     "Cómo conectar →",
+    alt_tag:      "Tres formas de usar",
+    alt_title:    "Elige tu modo",
+    alt_sub:      "La extensión funciona gratis nada más instalarla. ¿Necesitas más? Suscríbete o conecta tu propia clave API.",
+    feat1_title:  "Gratis — ahora mismo",
+    feat1_text:   "30 traducciones al día ya están incluidas. Sin configuración — instala la extensión y empieza a traducir. Gratis y sin registro.",
+    feat2_title:  "Suscripción",
+    feat2_text:   "Más traducciones al día por una pequeña tarifa. Nos ayuda a mantener el proyecto y los servidores. Próximamente.",
+    feat3_title:  "Clave API propia",
+    feat3_text:   "Conecta una clave de OpenAI, Anthropic, Google o xAI — y traduce sin ningún límite de la extensión. Para quienes prefieren el control total.",
     guide_tag:    "Guía paso a paso",
     guide_title:  "Cómo obtener una clave API",
     guide_sub:    "Elige un proveedor y sigue las instrucciones. Solo tarda un par de minutos.",
@@ -131,11 +191,11 @@ const T = {
     warn_once:    "¡La clave se muestra solo una vez — cópiala inmediatamente!",
     final_hint:   "Popup → «Mi clave API» → selecciona proveedor → pega la clave → «Verificar clave»",
     open_site:    "Abrir sitio ↗",
-    popup_connection: "Conexión:",
-    popup_server:     "A través del servidor",
+    popup_connection: "Fuente de API",
+    popup_server:     "Servidor público",
     popup_subscribe:  "Comprar suscripción",
     popup_own_key:    "Clave API propia",
-    popup_own_hint:   "Solicitudes directas al proveedor de IA, sin límites",
+    popup_own_hint:   "Sin límites",
     popup_provider:   "Proveedor:",
     popup_model:      "Modelo:",
     popup_api_key:    "Clave API:",
@@ -144,23 +204,43 @@ const T = {
   },
   zh: {
     nav_alt:      "无限制",
-    nav_guide:    "使用指南",
+    nav_guide:    "API 密钥",
     nav_privacy:  "隐私",
-    badge:        "即将推出",
-    hero_title:   "订阅功能\n开发中",
-    hero_sub:     "在订阅计划准备期间，您现在就可以解除所有限制——只需连接您自己的API密钥即可。",
-    hero_cta:     "了解如何操作 →",
-    alt_tag:      "立即可用",
-    alt_title:    "今天就实现无限翻译",
-    alt_sub:      "连接来自任何受支持AI提供商的API密钥——每天30次翻译的限制将不再适用。扩展程序本身不施加任何限制：限制仅取决于您的API密钥余额。",
-    feat1_title:  "4个提供商可选",
-    feat1_text:   "OpenAI、Anthropic、Google Gemini和xAI Grok——选择最适合您的。",
-    feat2_title:  "扩展程序无限制",
-    feat2_text:   "扩展程序不限制翻译数量。限制仅取决于您的API余额。",
-    feat3_title:  "私密且安全",
-    feat3_text:   "API密钥存储在您的浏览器缓存中，永远不会传输给第三方。",
-    feat4_title:  "快速设置",
-    feat4_text:   "只需2-3分钟即可获取API密钥并配置扩展程序。无需复杂配置。",
+    nav_howto:    "使用教程",
+    howto_tag:    "使用指南",
+    howto_title:  "选中文本 — 获得翻译",
+    howto_sub:    "扩展程序在任何网站上静默运行。无需配置——只需选中文本即可。",
+    howto_s1_title: "在页面上选中文本",
+    howto_s1_text:  "在任何网站上，用鼠标高亮选中单词、短语或段落。最少 2 个字符，最多 5000 个字符。支持所有语言。",
+    howto_s2_title: "点击翻译按钮",
+    howto_s2_text:  "选中内容旁边会出现一个带有字母「T」的紫色按钮。悬停可预加载翻译。点击后弹出结果窗口。",
+    howto_s3_title: "阅读翻译结果",
+    howto_s3_text:  "翻译显示在一个小型浮动弹窗中。点击复制按钮可一键复制结果。点击 × 按钮或在弹窗外点击可关闭。",
+    howto_s4_title: "保存到词典（可选）",
+    howto_s4_text:  "弹窗中有一个「+」按钮，可将原文 → 译文对保存到个人词典。词典以右侧面板形式打开。",
+    howto_instant_title: "即时翻译",
+    howto_instant_text:  "在扩展弹窗中启用「选中即翻译」。松开鼠标按钮后翻译将自动开始——无需点击按钮。",
+    howto_dict_title: "个人词典",
+    howto_dict_text:  "边阅读边建立词汇表。面板从右侧打开，拖动左边缘可调整宽度。一键导出为 CSV 或 Excel。",
+    howto_hotkeys_title: "键盘快捷键",
+    howto_hk_toggle:    "开启 / 关闭扩展程序",
+    howto_hk_dict:      "打开 / 关闭词典面板",
+    howto_hk_close:     "关闭翻译弹窗",
+    howto_settings_title: "设置",
+    howto_settings_text:  "点击浏览器工具栏中的扩展图标：开/关切换、翻译语言、界面语言（🇷🇺🇬🇧🇪🇸🇨🇳）、API 来源——公共服务器或自定义密钥。",
+    badge:        "订阅即将推出",
+    hero_title:   "今天起\n无限翻译",
+    hero_sub:     "连接来自 OpenAI、Anthropic、Google 或 xAI 的 API 密钥——无限制翻译。更简便的订阅方案正在开发中。",
+    hero_cta:     "如何连接 →",
+    alt_tag:      "三种使用方式",
+    alt_title:    "选择您的模式",
+    alt_sub:      "安装后扩展程序即可免费使用。需要更多？订阅或连接您自己的 API 密钥。",
+    feat1_title:  "免费 — 立即可用",
+    feat1_text:   "每天 30 次翻译已包含在内。无需设置——安装扩展即可开始翻译。免费且无需注册。",
+    feat2_title:  "订阅",
+    feat2_text:   "以少量费用获得更多每日翻译次数。帮助我们维护项目和服务器。即将推出。",
+    feat3_title:  "自定义 API 密钥",
+    feat3_text:   "连接 OpenAI、Anthropic、Google 或 xAI 密钥——无任何扩展限制地翻译。适合偏好完全掌控的用户。",
     guide_tag:    "分步指南",
     guide_title:  "如何获取API密钥",
     guide_sub:    "选择提供商并按照说明操作。只需几分钟。",
@@ -177,11 +257,11 @@ const T = {
     warn_once:    "密钥只显示一次——请立即复制！",
     final_hint:   "扩展弹窗 → «自己的API密钥» → 选择提供商 → 粘贴密钥 → «验证密钥»",
     open_site:    "打开网站 ↗",
-    popup_connection: "连接方式:",
-    popup_server:     "通过服务器",
+    popup_connection: "API 来源",
+    popup_server:     "公共服务器",
     popup_subscribe:  "购买订阅",
     popup_own_key:    "自定义API密钥",
-    popup_own_hint:   "直接向AI提供商发送请求，无扩展限制",
+    popup_own_hint:   "无限制",
     popup_provider:   "提供商:",
     popup_model:      "模型:",
     popup_api_key:    "API密钥:",
@@ -245,10 +325,10 @@ const PROVIDERS = {
     name: "Anthropic (Claude)", color: "#b45309", bg: "#fffbeb",
     emoji: "🧠", url: "console.anthropic.com",
     free: {
-      ru: "При регистрации новые пользователи получают $5 бесплатных кредитов — этого хватит на тысячи переводов с Claude Haiku.",
-      en: "New users receive $5 in free credits on signup — enough for thousands of translations with Claude Haiku.",
-      es: "Los nuevos usuarios reciben $5 en créditos gratuitos al registrarse — suficiente para miles de traducciones con Claude Haiku.",
-      zh: "新用户注册时获得$5免费积分——足够使用Claude Haiku进行数千次翻译。",
+      ru: "Бесплатные стартовые кредиты могут быть недоступны — проверьте актуальные условия на сайте Anthropic. Модель Claude Haiku 4.5 отличается низкой стоимостью: тысячи переводов стоят лишь несколько центов.",
+      en: "Free starter credits may not be available — check current terms on Anthropic's website. Claude Haiku 4.5 is extremely cost-efficient: thousands of translations cost only a few cents.",
+      es: "Es posible que no haya créditos gratuitos de inicio — verifica las condiciones actuales en el sitio de Anthropic. Claude Haiku 4.5 es muy económico: miles de traducciones cuestan solo unos céntimos.",
+      zh: "免费起始积分可能不可用——请在 Anthropic 网站上查看最新条款。Claude Haiku 4.5 非常经济实惠：数千次翻译仅需几美分。",
     },
     steps: {
       ru: [
@@ -339,10 +419,10 @@ const PROVIDERS = {
     name: "xAI (Grok)", color: "#111827", bg: "#f9fafb",
     emoji: "𝕏", url: "console.x.ai",
     free: {
-      ru: "xAI периодически предоставляет бесплатные кредиты новым пользователям. В остальных случаях необходимо пополнить баланс.",
-      en: "xAI periodically provides free credits to new users. Otherwise, a balance top-up is required.",
-      es: "xAI periódicamente otorga créditos gratuitos a nuevos usuarios. De lo contrario, se requiere recarga de saldo.",
-      zh: "xAI定期向新用户提供免费积分。否则需要充值余额。",
+      ru: "xAI периодически предоставляет стартовые кредиты новым пользователям — уточните текущие условия на сайте. Grok 3 Mini — одна из самых доступных по стоимости моделей.",
+      en: "xAI periodically provides starter credits to new users — check current terms on their website. Grok 3 Mini is one of the most cost-efficient models available.",
+      es: "xAI periódicamente ofrece créditos iniciales a nuevos usuarios — verifica las condiciones actuales en su sitio web. Grok 3 Mini es uno de los modelos más económicos disponibles.",
+      zh: "xAI 定期向新用户提供起始积分——请在其网站上查看当前条款。Grok 3 Mini 是目前最具成本效益的模型之一。",
     },
     steps: {
       ru: [
@@ -401,17 +481,17 @@ function applyTranslations() {
     if (el.tagName === "INPUT") { el.placeholder = val; }
     else { el.innerHTML = val.replace(/\n/g, "<br>"); }
   });
-  document.title = "Selection Translate AI – " + (currentLang === "ru" ? "Инструкция по API ключам" :
-    currentLang === "es" ? "Guía de claves API" :
-    currentLang === "zh" ? "API密钥指南" : "API Keys Guide");
+  document.title = "Selection Translate AI – " + (currentLang === "ru" ? "Перевод без лимитов" :
+    currentLang === "es" ? "Traduce sin límites" :
+    currentLang === "zh" ? "无限制翻译" : "Translate Without Limits");
 }
 
 
 // Provider display names (for popup mockup)
 const PROVIDER_DISPLAY = {
   openai:    { label: "OpenAI (ChatGPT)",    model: "GPT-4o Mini",       key: "sk-proj-••••••••••••••••" },
-  anthropic: { label: "Anthropic (Claude)",   model: "Claude 3.5 Haiku",  key: "sk-ant-api03-•••••••••••" },
-  google:    { label: "Google AI (Gemini)",   model: "Gemini 2.5 Flash",  key: "AIzaSy••••••••••••••••••" },
+  anthropic: { label: "Anthropic (Claude)",   model: "Claude Haiku 4.5",  key: "sk-ant-api03-•••••••••••" },
+  google:    { label: "Google AI (Gemini)",   model: "Gemini 2.0 Flash",  key: "AIzaSy••••••••••••••••••" },
   xai:       { label: "xAI (Grok)",           model: "Grok 3 Mini",       key: "xai-••••••••••••••••••••" },
 };
 
@@ -445,53 +525,97 @@ function buildStepUI(step) {
 
 function buildFinalStepMockup(providerId) {
   const pd = PROVIDER_DISPLAY[providerId] || PROVIDER_DISPLAY.openai;
+
+  // Provider tabs — order matches real extension: OpenAI | Claude | Grok | Gemini
+  const tabDefs = [
+    { id: 'openai',    label: 'OpenAI'  },
+    { id: 'anthropic', label: 'Claude'  },
+    { id: 'xai',       label: 'Grok'   },
+    { id: 'google',    label: 'Gemini' },
+  ];
+  const tabsHtml = tabDefs.map(({ id, label }) =>
+    `<div class="pm-tab${id === providerId ? ' pm-tab-active' : ''}">${label}</div>`
+  ).join('');
+
+  // Model pills — 2 per provider, first = default (active)
+  const modelPills = {
+    openai:    ['GPT-4o Mini', 'GPT-4o'],
+    anthropic: ['Haiku 4.5', 'Sonnet 4.5'],
+    google:    ['Flash 2.0', 'Flash 1.5'],
+    xai:       ['Grok 3 Mini', 'Grok 3'],
+  };
+  const modelsHtml = (modelPills[providerId] || modelPills.openai).map((m, i) =>
+    `<div class="pm-model-pill${i === 0 ? ' pm-model-active' : ''}">${m}</div>`
+  ).join('');
+
+  const publicSub = currentLang === 'ru' ? '30 переводов / день'
+    : currentLang === 'es' ? '30 traducciones / día'
+    : currentLang === 'zh' ? '每天 30 次翻译'
+    : '30 translations / day';
+
+  const keySavedText = currentLang === 'ru' ? 'Ключ сохранён'
+    : currentLang === 'es' ? 'Clave guardada'
+    : currentLang === 'zh' ? '密钥已保存'
+    : 'Key saved';
+
+  const saveText = currentLang === 'ru' ? 'Сохранить'
+    : currentLang === 'es' ? 'Guardar'
+    : currentLang === 'zh' ? '保存'
+    : 'Save';
+
+  const validateText = currentLang === 'ru' ? 'Проверить'
+    : currentLang === 'es' ? 'Verificar'
+    : currentLang === 'zh' ? '验证'
+    : 'Validate';
+
   return `<div class="popup-mockup">
 
-    <div class="pm-topbar">
+    <div class="pm-header">
+      <div class="pm-header-left">
+        <div class="pm-toggle-track pm-toggle-on"><div class="pm-toggle-thumb"></div></div>
+        <span class="pm-hotkey-hint">Alt+Shift+T</span>
+      </div>
       <div class="pm-flags">🇷🇺🇬🇧🇪🇸🇨🇳</div>
-      <label class="pm-toggle-wrap"><div class="pm-toggle"></div></label>
     </div>
 
     <div class="pm-body">
       <div class="pm-card">
-        <div class="pm-section-label">${t("popup_connection")}</div>
+        <div class="pm-section-label">${t('popup_connection')}</div>
 
-        <div class="pm-server-row">
-          <div class="pm-radio-opt pm-inactive">
-            <div class="pm-radio-circle"></div>
-            <div class="pm-opt-text">
-              <span class="pm-opt-title">${t("popup_server")}</span>
-            </div>
+        <div class="pm-radio-card">
+          <div class="pm-radio-dot"></div>
+          <div class="pm-radio-body">
+            <span class="pm-radio-title">${t('popup_server')}</span>
+            <span class="pm-radio-sub">${publicSub}</span>
           </div>
-          <div class="pm-subscribe-chip">${t("popup_subscribe")}</div>
+          <div class="pm-sub-chip">${t('popup_subscribe')}</div>
         </div>
 
-        <div class="pm-radio-opt pm-active">
-          <div class="pm-radio-circle pm-radio-filled"></div>
-          <div class="pm-opt-text">
-            <span class="pm-opt-title">${t("popup_own_key")}</span>
-            <span class="pm-opt-hint">${t("popup_own_hint")}</span>
+        <div class="pm-radio-card pm-active">
+          <div class="pm-radio-dot pm-radio-filled"></div>
+          <div class="pm-radio-body">
+            <span class="pm-radio-title">${t('popup_own_key')}</span>
+            <span class="pm-radio-sub">${t('popup_own_hint')}</span>
           </div>
         </div>
 
         <div class="pm-own-panel">
-          <div class="pm-field">
-            <div class="pm-field-label">${t("popup_provider")}</div>
-            <div class="pm-select-mock">${pd.label} <span class="pm-caret">▾</span></div>
+          <div class="pm-provider-tabs">${tabsHtml}</div>
+          <div class="pm-model-pills">${modelsHtml}</div>
+          <div class="pm-key-row">
+            <div class="pm-key-input">${pd.key}</div>
+            <div class="pm-eye-btn">👁</div>
           </div>
-          <div class="pm-field">
-            <div class="pm-field-label">${t("popup_model")}</div>
-            <div class="pm-select-mock">${pd.model} <span class="pm-caret">▾</span></div>
+          <div class="pm-key-active-badge">
+            <span class="pm-key-check">✓</span>
+            <span>${keySavedText}</span>
+            <span class="pm-key-masked">${pd.key}</span>
           </div>
-          <div class="pm-field">
-            <div class="pm-field-label">${t("popup_api_key")}</div>
-            <div class="pm-key-row">
-              <div class="pm-key-input">${pd.key}</div>
-              <div class="pm-eye-btn">👁</div>
-            </div>
+          <div class="pm-actions-row">
+            <div class="pm-btn-save">${saveText}</div>
+            <div class="pm-btn-validate">${validateText}</div>
           </div>
-          <div class="pm-check-btn">${t("popup_check_btn")}</div>
-          <div class="pm-key-status">${t("popup_key_valid")}</div>
+          <div class="pm-key-status-ok">${t('popup_key_valid')}</div>
         </div>
       </div>
     </div>

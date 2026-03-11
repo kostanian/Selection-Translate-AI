@@ -50,7 +50,17 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="icon128.png" alt="Selection Translate AI" width="28" height="28">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;display:block">
+          <defs>
+            <linearGradient id="nlg" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+          <circle cx="14" cy="14" r="14" fill="url(#nlg)"/>
+          <rect x="8" y="9.5" width="12" height="2.5" rx="1.25" fill="white"/>
+          <rect x="12.75" y="9.5" width="2.5" height="10" rx="1.25" fill="white"/>
+        </svg>
         <span>Selection Translate AI</span>
       </a>
       <div class="nav-links">
@@ -120,7 +130,6 @@
         <ul>
           <li data-i18n="pp_s6_li1"></li>
           <li data-i18n="pp_s6_li2"></li>
-          <li data-i18n="pp_s6_li3"></li>
           <li data-i18n="pp_s6_li4"></li>
           <li data-i18n="pp_s6_li5"></li>
           <li data-i18n="pp_s6_li6"></li>
@@ -141,7 +150,11 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <img src="icon128.png" alt="" width="22" height="22">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.65;display:block;flex-shrink:0">
+          <circle cx="11" cy="11" r="11" fill="#8b5cf6"/>
+          <rect x="6" y="7.5" width="10" height="2" rx="1" fill="white"/>
+          <rect x="10" y="7.5" width="2" height="8" rx="1" fill="white"/>
+        </svg>
       <span data-i18n="pp_footer"></span>
       <a href="privacy-policy.html" class="footer-privacy-link" data-i18n="pp_footer_privacy"></a>
     </div>
@@ -181,7 +194,6 @@ const T_PP = {
     pp_s6:    "6. Разрешения Chrome",
     pp_s6_li1: "<strong>activeTab</strong> — определять выделенный текст на текущей вкладке",
     pp_s6_li2: "<strong>storage</strong> — сохранять настройки локально на устройстве",
-    pp_s6_li3: "<strong>contextMenus</strong> — добавить «Перевести» в контекстное меню",
     pp_s6_li4: "<strong>tabs</strong> — открывать страницу инструкции при нажатии кнопки подписки",
     pp_s6_li5: "<strong>scripting</strong> — вставлять всплывающую подсказку с переводом",
     pp_s6_li6: "<strong>host_permissions (&lt;all_urls&gt;)</strong> — работать на любом сайте, где вы выделяете текст",
@@ -229,7 +241,6 @@ const T_PP = {
     pp_s6:    "6. Chrome Permissions",
     pp_s6_li1: "<strong>activeTab</strong> — to detect text you select on the current tab",
     pp_s6_li2: "<strong>storage</strong> — to save your settings locally on your device",
-    pp_s6_li3: "<strong>contextMenus</strong> — to add \"Translate\" to the right-click menu",
     pp_s6_li4: "<strong>tabs</strong> — to open the setup guide when you click the subscribe button",
     pp_s6_li5: "<strong>scripting</strong> — to inject the translation tooltip on web pages",
     pp_s6_li6: "<strong>host_permissions (&lt;all_urls&gt;)</strong> — to work on any website where you select text",
@@ -277,7 +288,6 @@ const T_PP = {
     pp_s6:    "6. Permisos de Chrome",
     pp_s6_li1: "<strong>activeTab</strong> — para detectar el texto seleccionado en la pestaña actual",
     pp_s6_li2: "<strong>storage</strong> — para guardar tu configuración localmente en tu dispositivo",
-    pp_s6_li3: "<strong>contextMenus</strong> — para añadir &ldquo;Traducir&rdquo; al menú contextual del botón derecho",
     pp_s6_li4: "<strong>tabs</strong> — para abrir la guía de configuración al hacer clic en el botón de suscripción",
     pp_s6_li5: "<strong>scripting</strong> — para insertar el tooltip de traducción en las páginas web",
     pp_s6_li6: "<strong>host_permissions (&lt;all_urls&gt;)</strong> — para funcionar en cualquier sitio web donde selecciones texto",
@@ -325,7 +335,6 @@ const T_PP = {
     pp_s6:    "6. Chrome 权限",
     pp_s6_li1: "<strong>activeTab</strong> — 检测您在当前标签页中选中的文本",
     pp_s6_li2: "<strong>storage</strong> — 在您的设备本地保存设置",
-    pp_s6_li3: "<strong>contextMenus</strong> — 在右键菜单中添加&ldquo;翻译&rdquo;选项",
     pp_s6_li4: "<strong>tabs</strong> — 点击订阅按钮时打开设置指南页面",
     pp_s6_li5: "<strong>scripting</strong> — 在网页上注入翻译提示框",
     pp_s6_li6: "<strong>host_permissions (&lt;all_urls&gt;)</strong> — 在您选择文本的任何网站上运行",
